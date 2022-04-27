@@ -23,7 +23,7 @@ taskInput.addEventListener('focus', function(){taskInput.value = ''});
 for(let i=1; i<tabs.length; i++) {
     tabs[i].addEventListener("click", function(event){filter(event)});
 }
-//q
+
 function filter(event) {
     mode = event.target.id
     filterList = [];
