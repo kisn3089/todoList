@@ -92,24 +92,82 @@ let names = [
     "Tim Cook",
     "Lloyd Blankfein",
 ];
-//문제 map 1
-// let upper = names.map((item)=> item.toUpperCase())
-// console.log(upper);
+//map 1
+//모든 이름을 대문자로 바꾸어서 출력하시오.
+// let upperCase = names.map((item) => item.toUpperCase());
+// console.log(upperCase);
 
-//문제 map 2
-// let upper = names.map((item)=> item.)
+//map 2
+//성을제외한 이름만 출력하시오. (예-[“Steven”,“Bill”,“Mark”,“Elon”…])
+// let firstName = names.map((item, index) => {
+//     let splitName = item.split(' ');
+//     return splitName[0];
+// })
+// console.log(firstName)
 
-//문제 map 3
-// let upper = names.map((item) => item.startsWith(item))
-// console.log(upper);
+//map 3
+//이름의 이니셜만 출력하시오. (예-[“SPU”,“BG”,“MEZ”,“EM”…])
+// let initial = names.map((item) => {
+//     let splitName = item.split(" ")
+//     let ini = '';
+//     splitName.forEach((item) => (ini += item[0]))
+//     return ini;
+//
+// })
+// console.log(initial)
 
-//문제 filter 1
-// let upper = names.filter((item) => item.includes("a"))
-// console.log(upper);
+//filter 1
+//이름에 a를 포함한 사람들을 출력하시오.
+// let includeA = names.filter((item) => item.includes("a"))
+// console.log(includeA)
 
-//문제 filter 2
-// let upper = names.filter((item) => item.includes(item.))
-// console.log(upper);
+//filter 2
+//이름에 같은 글자가 연속해서 들어간 사람을 출력하시오. (예-tt,ff,ll 이런 글자들)
+// let overlap = names.filter((item, index) => {
+//     let split = item.split("")
+//     return split.some((letter, index) => letter === split[index + 1])
+// })
+// console.log(overlap)
+
+//some 1
+//전체 이름의 길이가 20자 이상인 사람이 있는가?
+// let namesLength = names.some((item) => console.log(item.length<=20))
+
+//some 2
+//성을 제외한 이름에 p를 포함한 사람이 있는가?(대소문자 상관 no)
+// let secondP = names.some((item) => {
+//     let split = item.split(" ")
+//     split.pop();
+//     return split.some(eachName => eachName.toLocaleLowerCase())
+// })
+// console.log(secondP)
+
+//every 1
+//모두의 전체 이름의 길이가 20자 이상인가?
+// console.log(names.every((item) => item.length>=20))
+
+//every 2
+//모두의 이름에 a 가 포함되어 있는가?
+// console.log(names.every((item) => item.includes("a")))
+
+//find 1
+//전체 이름의 길이가 20자 이상인 사람을 찾으시오.
+// let namesLength = names.find((item) => item.length>=20)
+// console.log(namesLength)
+
+//find 2
+//미들네임이 포함되어있는 사람을 찾으시오.(예-Steven Paul Jobs)
+// console.log(names.find(item => item.split(' ').length>=3))
+
+//findIndex 1
+//전체 이름의 길이가 20자 이상인 사람의 인덱스 번호를 찾으시오.
+// console.log(names.findIndex(item => item.length>=20))
+
+//findIndex 2
+//미들네임이 포함되어있는 사람의 인덱스 번호를 찾으시오.
+// console.log(names.findIndex((item) => item.split(' ').length>=3))
+
+
 
 let taskInput = document.getElementById("task-input");
 let plusAdd = document.getElementById('plus');
