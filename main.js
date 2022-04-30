@@ -166,7 +166,7 @@ let names = [
 //findIndex 2
 //미들네임이 포함되어있는 사람의 인덱스 번호를 찾으시오.
 // console.log(names.findIndex((item) => item.split(' ').length>=3))
-
+// ldTppI2IrqmzZ1XRZ2qVZ-WQnQCfNlXwrJq9sSwSYfM
 
 
 let taskInput = document.getElementById("task-input");
